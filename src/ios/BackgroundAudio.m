@@ -10,6 +10,7 @@
 - (void)pluginInitialize {
     // initializations go here.
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     BOOL ok;
     NSError *setCategoryError = nil;
     ok = [audioSession setCategory:AVAudioSessionCategoryPlayback
